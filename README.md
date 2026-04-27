@@ -1,0 +1,2 @@
+# Abbas Rasool Portfolio
+Project has been initiated. This is a comprehensive portfolio website for Abbas Rasool, focusing on his expertise in SQL, Crystal Reports, VB6, and transitioning to modern web development.
