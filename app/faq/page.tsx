@@ -1,3 +1,4 @@
+import '@/app/faq/globals.css';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
