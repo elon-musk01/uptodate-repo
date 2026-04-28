@@ -1,19 +1,20 @@
+import '@/app/about/globals.css';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'About – Abbas Rasool | Crystal Reports Developer',
-  description: 'Learn more about Abbas Rasool, a Crystal Reports and SQL Server specialist with 2+ years of experience building enterprise reporting solutions for ERP systems.',
-  keywords: ['Crystal Reports developer', 'SQL Server specialist', 'VB6 developer', 'enterprise reporting', 'ERP reports Karachi', 'About me'],
+  title: 'About Abbas Rasool | Crystal Reports Developer & SQL Server Specialist - Legacy Developer Profile',
+  description: 'About Abbas Rasool - Crystal Reports Developer with 2+ years experience in SQL Server, VB6, and legacy development. Expert in enterprise reporting, ERP dashboards, and database optimization. Based in Karachi, Pakistan.',
+  keywords: ['Crystal Reports developer', 'SQL Server specialist', 'VB6 developer', 'legacy developer Pakistan', 'enterprise reporting', 'ERP reports Karachi', 'About Abbas Rasool', 'database developer Pakistan', 'reporting specialist Karachi'],
   openGraph: {
-    title: 'About – Abbas Rasool | Crystal Reports Developer',
-    description: 'Learn more about Abbas Rasool, a Crystal Reports and SQL Server specialist with 2+ years of experience building enterprise reporting solutions for ERP systems.',
+    title: 'About Abbas Rasool — Crystal Reports Developer | SQL Server Specialist',
+    description: '2+ years building enterprise Crystal Reports dashboards and SQL Server stored procedures for ERP systems. Available for freelance reporting projects.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About – Abbas Rasool | Crystal Reports Developer',
-    description: 'Learn more about Abbas Rasool, a Crystal Reports and SQL Server specialist with 2+ years of experience building enterprise reporting solutions for ERP systems.',
+    title: 'About Abbas Rasool — Crystal Reports Developer | SQL Server Specialist',
+    description: '2+ years building enterprise Crystal Reports dashboards and SQL Server stored procedures for ERP systems. Available for freelance reporting projects.',
   },
   alternates: { canonical: 'https://abbasrasool.com/about' },
 };

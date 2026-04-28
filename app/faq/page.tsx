@@ -1,9 +1,9 @@
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'FAQs – Abbas Rasool | Frequently Asked Questions',
-  description: 'Frequently asked questions about Abbas Rasool services, expertise, availability, and project turnaround times for Crystal Reports and SQL Server development.',
-  keywords: ['FAQ', 'Crystal Reports FAQ', 'SQL Server FAQ', 'hire questions', 'project turnaround time'],
+  title: 'FAQs - Abbas Rasool Crystal Reports Developer & SQL Server Specialist - Legacy Developer Questions',
+  description: 'Frequently asked questions about Abbas Rasool services as Crystal Reports developer and SQL Server specialist. Topics include hiring Crystal Reports developer, SQL Server consultant fees, VB6 developer availability, project turnaround time, and legacy developer services.',
+  keywords: ['FAQ', 'Crystal Reports FAQ', 'SQL Server FAQ', 'hire Crystal Reports developer', 'hire SQL Server specialist', 'VB6 developer FAQ', 'legacy developer FAQ', 'project turnaround time', 'Crystal Reports pricing', 'database consultant Pakistan'],
   openGraph: {
     title: 'FAQs – Abbas Rasool | Frequently Asked Questions',
     description: 'Frequently asked questions about Abbas Rasool services, expertise, availability, and project turnaround times for Crystal Reports and SQL Server development.',

@@ -58,6 +58,11 @@ export default function RootLayout({
       addressLocality: 'Karachi',
       addressCountry: 'Pakistan',
     },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Freelance Crystal Reports Developer',
+      description: 'Enterprise reporting and database solutions provider',
+    },
   };
 
   const webSiteSchema = {
@@ -73,10 +78,171 @@ export default function RootLayout({
     },
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What services does Abbas Rasool offer as a Crystal Reports developer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Abbas Rasool specializes in Crystal Reports development, SQL Server stored procedures, database optimization, VB6 application maintenance, and enterprise reporting solutions. He creates custom reports, dashboards, and data visualization tools for ERP systems.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does it cost to hire a Crystal Reports developer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Crystal Reports developer rates vary based on project complexity. Abbas Rasool offers competitive freelance rates for Crystal Reports development, SQL Server optimization, and database projects. Contact for a customized quote based on your specific requirements.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the typical turnaround time for Crystal Reports projects?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most Crystal Reports projects are completed within 3-5 business days for standard reports. Complex enterprise solutions with custom SQL queries and multiple data sources may take 1-2 weeks. Rush projects are available with priority processing.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Abbas Rasool available for remote work as a legacy developer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Abbas Rasool works remotely and has extensive experience collaborating with clients across different time zones. He specializes in legacy development including VB6, Crystal Reports, and SQL Server projects for international clients.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does Abbas Rasool provide ongoing maintenance for Crystal Reports?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Abbas Rasool offers ongoing maintenance and support packages for long-term Crystal Reports and SQL Server projects. This includes report updates, database optimization, bug fixes, and performance improvements.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What ERP systems does Abbas Rasool work with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Abbas Rasool has experience working with various ERP systems including SAP, Oracle ERP, Microsoft Dynamics, and custom enterprise solutions. He creates reports and data integrations tailored to specific business requirements.',
+        },
+      },
+    ],
+  };
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Abbas Rasool - Crystal Reports Developer',
+    url: 'https://abbasrasool.com',
+    logo: 'https://abbasrasool.com/logo.png',
+    description: 'Professional Crystal Reports Developer and SQL Server Specialist offering enterprise reporting solutions and legacy development services',
+    sameAs: [
+      'https://github.com/elon-musk01/uptodate-repo',
+      'https://linkedin.com/in/abbas-rasool',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'N. Nazimabad Block L',
+      addressLocality: 'Karachi',
+      addressRegion: 'Sindh',
+      postalCode: '74700',
+      addressCountry: 'PK',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+92-320-308-7202',
+      contactType: 'customer service',
+      email: 'abbasrasool04@gmail.com',
+      availableLanguage: ['English', 'Urdu'],
+    },
+    areaServed: ['Pakistan', 'International'],
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://abbasrasool.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://abbasrasool.com/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Hire',
+        item: 'https://abbasrasool.com/hire',
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Contact',
+        item: 'https://abbasrasool.com/contact',
+      },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        name: 'FAQ',
+        item: 'https://abbasrasool.com/faq',
+      },
+    ],
+  };
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Abbas Rasool - Crystal Reports Developer',
+    image: 'https://abbasrasool.com/og-image.jpg',
+    description: 'Professional Crystal Reports Developer and SQL Server Specialist providing enterprise reporting solutions, database optimization, and legacy development services in Karachi, Pakistan',
+    url: 'https://abbasrasool.com',
+    telephone: '+92-320-308-7202',
+    email: 'abbasrasool04@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'N. Nazimabad Block L',
+      addressLocality: 'Karachi',
+      addressRegion: 'Sindh',
+      postalCode: '74700',
+      addressCountry: 'PK',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '24.8607',
+      longitude: '67.0011',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
+    priceRange: '$$',
+    areaServed: ['Pakistan', 'International'],
+    sameAs: [
+      'https://github.com/elon-musk01/uptodate-repo',
+      'https://linkedin.com/in/abbas-rasool',
+    ],
+  };
+
   return (
     <html lang="en" className={`${display.variable} ${mono.variable} h-full antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Abbas Rasool - Crystal Reports Developer and SQL Server Specialist with 2+ years experience. Expert in VB6, ERP reporting, and database optimization. Available for freelance projects." />
+        <meta name="keywords" content="Crystal Reports developer, SQL Server specialist, VB6 developer, legacy developer Pakistan, enterprise reporting" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
@@ -85,9 +251,25 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[#0A0A0F] text-[#F0F0F8]">
         <MainLayout>{children}</MainLayout>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
       </body>
     </html>
   );

@@ -21,17 +21,17 @@ export default function CTA() {
             I'm available for freelance Crystal Reports and SQL Server projects. Let's discuss how I can help transform your data into actionable insights.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-12">
+          <div className="flex flex-col sm:flex-row items-stretch gap-3 sm:gap-4 justify-center mb-10 sm:mb-12">
             <a
               href="/hire"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-300 btn-primary"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-300 btn-primary flex-1"
             >
               <span>View My Services</span>
               <ArrowRight size={18} />
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#1A1A24] text-[#F0F0F8] font-semibold rounded-lg border border-[#2A2A38] hover:border-[#00D4FF]/50 transition-all duration-300 card-hover"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#1A1A24] text-[#F0F0F8] font-semibold rounded-lg border border-[#2A2A38] hover:border-[#00D4FF]/50 transition-all duration-300 card-hover flex-1"
             >
               <Mail size={18} />
               <span>Get in Touch</span>

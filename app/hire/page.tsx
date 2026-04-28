@@ -1,18 +1,19 @@
+import '@/app/hire/globals.css';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'Hire Me – Abbas Rasool | Crystal Reports & SQL Server Developer',
-  description: 'Hire Abbas Rasool for Crystal Reports development, SQL Server optimization, stored procedure design, and VB6 application maintenance. Available for freelance projects in Karachi, Pakistan.',
-  keywords: ['hire Crystal Reports developer', 'hire SQL Server specialist', 'freelance developer Karachi', 'VB6 developer hire', 'reporting specialist Pakistan'],
+  title: 'Hire Crystal Reports Developer & SQL Server Specialist - Abbas Rasool | Freelance Legacy Developer',
+  description: 'Hire Abbas Rasool - Crystal Reports Developer and SQL Server Specialist with 2+ years experience. Expert in VB6, ERP reporting, stored procedures, and database optimization. Available for freelance projects in Karachi, Pakistan. Get quotes for Crystal Reports development.',
+  keywords: ['hire Crystal Reports developer', 'hire SQL Server specialist', 'freelance Crystal Reports developer', 'hire VB6 developer', 'reporting specialist Pakistan', 'hire database developer Karachi', 'Crystal Reports freelancer', 'SQL Server consultant Pakistan', 'legacy developer hire', 'ERP reporting specialist'],
   openGraph: {
-    title: 'Hire Me – Abbas Rasool | Crystal Reports & SQL Server Developer',
+    title: 'Hire Abbas Rasool — Crystal Reports Developer | SQL Server Specialist',
     description: 'Hire Abbas Rasool for Crystal Reports development, SQL Server optimization, stored procedure design, and VB6 application maintenance. Available for freelance projects.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Me – Abbas Rasool | Crystal Reports & SQL Server Developer',
+    title: 'Hire Abbas Rasool — Crystal Reports Developer | SQL Server Specialist',
     description: 'Hire Abbas Rasool for Crystal Reports development, SQL Server optimization, stored procedure design, and VB6 application maintenance. Available for freelance projects.',
   },
   alternates: { canonical: 'https://abbasrasool.com/hire' },
@@ -48,7 +49,7 @@ export default function HirePage() {
           <div className="mt-8 text-center">
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-300 btn-primary"
             >
               Contact Me
             </a>

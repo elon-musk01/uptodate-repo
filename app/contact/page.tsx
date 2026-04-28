@@ -3,21 +3,22 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import '@/app/contact/globals.css';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'Contact – Abbas Rasool | Get in Touch',
-  description: 'Get in touch with Abbas Rasool for project inquiries, collaborations, or questions. Available for Crystal Reports and SQL Server freelance projects.',
-  keywords: ['contact Abbas Rasool', 'hire developer', 'project inquiry', 'Crystal Reports contact', 'SQL Server developer contact'],
+  title: 'Contact Abbas Rasool | Crystal Reports Developer & SQL Server Specialist - Hire Legacy Developer',
+  description: 'Contact Abbas Rasool for Crystal Reports development, SQL Server optimization, and legacy developer services. Available for freelance projects in Karachi, Pakistan. Get quotes for VB6, Crystal Reports, and database development.',
+  keywords: ['contact Abbas Rasool', 'hire developer Karachi', 'Crystal Reports contact', 'SQL Server developer contact', 'contact VB6 developer', 'legacy developer contact', 'project inquiry', 'hire Crystal Reports developer Pakistan', 'contact database specialist', 'Abbas Rasool contact'],
   openGraph: {
-    title: 'Contact – Abbas Rasool | Get in Touch',
+    title: 'Contact Abbas Rasool — Crystal Reports Developer | SQL Server Specialist',
     description: 'Get in touch with Abbas Rasool for project inquiries, collaborations, or questions. Available for Crystal Reports and SQL Server freelance projects.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact – Abbas Rasool | Get in Touch',
+    title: 'Contact Abbas Rasool — Crystal Reports Developer | SQL Server Specialist',
     description: 'Get in touch with Abbas Rasool for project inquiries, collaborations, or questions. Available for Crystal Reports and SQL Server freelance projects.',
   },
   alternates: { canonical: 'https://abbasrasool.com/contact' },

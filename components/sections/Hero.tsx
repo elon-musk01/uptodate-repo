@@ -24,7 +24,7 @@ export default function Hero() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-2.5 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm sm:text-base animate-fade-in">
                 <span className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse" />
-                Available for freelance projects
+                Available for freelance Crystal Reports & SQL Server projects
               </span>
             </motion.div>
 
@@ -46,9 +46,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg sm:text-xl lg:text-2xl text-[#9090A8] leading-relaxed"
             >
-              Senior SQL & Crystal Reports Specialist
+              Crystal Reports Developer & SQL Server Specialist - 2+ Years Experience
               <br />
-              <span className="text-[#5A5A72]">Transitioning to Modern Web Development</span>
+              <span className="text-[#5A5A72]">Enterprise Reporting & Legacy Development Expert in Karachi, Pakistan</span>
             </motion.p>
 
             {/* Skills Grid */}
@@ -75,18 +75,18 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+              className="flex flex-col sm:flex-row items-stretch gap-3 sm:gap-4"
             >
               <a
                 href="/hire"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-300 btn-primary"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-300 btn-primary flex-1"
               >
                 <span>Hire Me</span>
                 <ArrowRight size={18} />
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1A1A24] text-[#F0F0F8] font-semibold rounded-lg border border-[#2A2A38] hover:border-[#00D4FF]/50 transition-all duration-300 card-hover"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1A1A24] text-[#F0F0F8] font-semibold rounded-lg border border-[#2A2A38] hover:border-[#00D4FF]/50 transition-all duration-300 card-hover flex-1"
               >
                 <Mail size={18} />
                 <span>Get in Touch</span>
@@ -193,7 +193,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="absolute -top-4 -right-4 px-4 py-2 bg-[#1A1A24] border border-[#00D4FF] rounded-lg animate-fade-in"
             >
-              <p className="text-xs text-[#00D4FF] font-medium">2+ Years Experience</p>
+              <p className="text-xs text-[#00D4FF] font-medium">2+ Years Experience in Crystal Reports & SQL Server</p>
             </motion.div>
           </motion.div>
         </div>
