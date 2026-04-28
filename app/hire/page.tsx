@@ -1,8 +1,21 @@
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'Hire Me – Abbas Rasool',
-  description: 'Hire Abbas Rasool for Crystal Reports, SQL Server, and VB6 development projects.',
+  title: 'Hire Me – Abbas Rasool | Crystal Reports & SQL Server Developer',
+  description: 'Hire Abbas Rasool for Crystal Reports development, SQL Server optimization, stored procedure design, and VB6 application maintenance. Available for freelance projects in Karachi, Pakistan.',
+  keywords: ['hire Crystal Reports developer', 'hire SQL Server specialist', 'freelance developer Karachi', 'VB6 developer hire', 'reporting specialist Pakistan'],
+  openGraph: {
+    title: 'Hire Me – Abbas Rasool | Crystal Reports & SQL Server Developer',
+    description: 'Hire Abbas Rasool for Crystal Reports development, SQL Server optimization, stored procedure design, and VB6 application maintenance. Available for freelance projects.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hire Me – Abbas Rasool | Crystal Reports & SQL Server Developer',
+    description: 'Hire Abbas Rasool for Crystal Reports development, SQL Server optimization, stored procedure design, and VB6 application maintenance. Available for freelance projects.',
+  },
+  alternates: { canonical: 'https://abbasrasool.com/hire' },
 };
 
 export default function HirePage() {

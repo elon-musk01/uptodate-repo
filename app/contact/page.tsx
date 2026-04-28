@@ -6,8 +6,21 @@ import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'Contact – Abbas Rasool',
-  description: 'Get in touch with Abbas Rasool for project inquiries.',
+  title: 'Contact – Abbas Rasool | Get in Touch',
+  description: 'Get in touch with Abbas Rasool for project inquiries, collaborations, or questions. Available for Crystal Reports and SQL Server freelance projects.',
+  keywords: ['contact Abbas Rasool', 'hire developer', 'project inquiry', 'Crystal Reports contact', 'SQL Server developer contact'],
+  openGraph: {
+    title: 'Contact – Abbas Rasool | Get in Touch',
+    description: 'Get in touch with Abbas Rasool for project inquiries, collaborations, or questions. Available for Crystal Reports and SQL Server freelance projects.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact – Abbas Rasool | Get in Touch',
+    description: 'Get in touch with Abbas Rasool for project inquiries, collaborations, or questions. Available for Crystal Reports and SQL Server freelance projects.',
+  },
+  alternates: { canonical: 'https://abbasrasool.com/contact' },
 };
 
 export default function ContactPage() {
@@ -156,7 +169,7 @@ export default function ContactPage() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.name ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF] transition`}
+                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.name ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] transition`}
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -174,7 +187,7 @@ export default function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.email ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF] transition`}
+                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.email ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] transition`}
                     placeholder="your@email.com"
                   />
                   {errors.email && (
@@ -192,7 +205,7 @@ export default function ContactPage() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.subject ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF] transition`}
+                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.subject ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] transition`}
                     placeholder="Project inquiry"
                   />
                   {errors.subject && (
@@ -210,7 +223,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.message ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] focus:outline-none focus:border-[#00D4FF] focus:ring-1 focus:ring-[#00D4FF] transition resize-none`}
+                    className={`w-full px-4 py-3 bg-[#0A0A0F] border ${errors.message ? 'border-red-500' : 'border-[#2A2A38]'} rounded-lg text-[#F0F0F8] transition resize-none`}
                     placeholder="Tell me about your project..."
                   />
                   {errors.message && (
@@ -221,10 +234,32 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#00D4FF] text-[#0A0A0F] font-semibold rounded-lg hover:bg-[#00D4FF]/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-4 focus-visible:ring-[#00D4FF]/30"
                 >
                   {isSubmitting ? (
-                    <span>Sending...</span>
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      <span>Sending...</span>
+                    </>
                   ) : (
                     <>
                       <Send size={18} />

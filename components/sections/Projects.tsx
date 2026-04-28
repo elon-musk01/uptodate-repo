@@ -32,7 +32,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -40,21 +40,21 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <span className="inline-block px-4 py-2 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm text-[#00D4FF] mb-4">
+          <span className="inline-block px-4 py-2 sm:px-6 sm:py-2.5 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm sm:text-base text-[#00D4FF] mb-4 animate-fade-in">
             Projects
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-[#F0F0F8]">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F0F0F8]">
             Featured Projects
           </h2>
-          <p className="mt-4 text-lg text-[#9090A8] max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#9090A8] max-w-2xl mx-auto">
             Enterprise solutions built for real business problems
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -63,25 +63,25 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-[#111118] border border-[#2A2A38] rounded-xl overflow-hidden hover:border-[#00D4FF]/50 transition-all duration-300"
+              className="group bg-[#111118] border border-[#2A2A38] rounded-xl overflow-hidden hover:border-[#00D4FF]/50 transition-all duration-300 card-hover"
             >
               {/* Project Header */}
               <div className={`h-2 bg-gradient-to-r ${project.color}`} />
 
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-display text-2xl font-semibold text-[#F0F0F8] group-hover:text-[#00D4FF] transition-colors">
+                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-[#F0F0F8] group-hover:text-[#00D4FF] transition-colors">
                     {project.title}
                   </h3>
-                  <Database className="w-8 h-8 text-[#5A5A72] group-hover:text-[#00D4FF] transition-colors" />
+                  <Database className="w-6 h-6 sm:w-8 sm:h-8 text-[#5A5A72] group-hover:text-[#00D4FF] transition-colors" />
                 </div>
 
-                <p className="text-[#9090A8] mb-6 leading-relaxed">
+                <p className="text-[#9090A8] mb-5 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {project.description}
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -93,7 +93,7 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4">
+                <div className="flex gap-3 sm:gap-4">
                   <a
                     href="#"
                     className="inline-flex items-center gap-2 text-sm text-[#00D4FF] hover:text-[#00D4FF]/80 transition-colors"

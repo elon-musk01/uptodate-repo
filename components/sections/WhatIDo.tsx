@@ -50,7 +50,7 @@ const services = [
 
 export default function WhatIDo() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -58,21 +58,21 @@ export default function WhatIDo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <span className="inline-block px-4 py-2 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm text-[#00D4FF] mb-4">
+          <span className="inline-block px-4 py-2 sm:px-6 sm:py-2.5 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm sm:text-base text-[#00D4FF] mb-4 animate-fade-in">
             What I Do
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-[#F0F0F8]">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F0F0F8]">
             Services I Offer
           </h2>
-          <p className="mt-4 text-lg text-[#9090A8] max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#9090A8] max-w-2xl mx-auto">
             Specialized expertise in building data-driven solutions that help businesses make better decisions
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -81,15 +81,15 @@ export default function WhatIDo() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group p-8 bg-[#111118] border border-[#2A2A38] rounded-xl hover:border-[#00D4FF]/50 transition-all duration-300"
+              className="group p-6 sm:p-8 bg-[#111118] border border-[#2A2A38] rounded-xl hover:border-[#00D4FF]/50 transition-all duration-300 card-hover"
             >
-              <div className={`w-14 h-14 ${service.bgColor} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className={`w-7 h-7 ${service.color}`} />
+              <div className={`w-12 h-12 sm:w-14 sm:h-14 ${service.bgColor} rounded-xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${service.color}`} />
               </div>
-              <h3 className="font-display text-xl font-semibold text-[#F0F0F8] mb-3">
+              <h3 className="font-display text-lg sm:text-xl font-semibold text-[#F0F0F8] mb-3">
                 {service.title}
               </h3>
-              <p className="text-[#9090A8] leading-relaxed">
+              <p className="text-[#9090A8] leading-relaxed text-sm sm:text-base">
                 {service.description}
               </p>
             </motion.div>

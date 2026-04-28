@@ -56,7 +56,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section className="py-24 px-6 bg-[#111118]">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#111118]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -64,21 +64,21 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <span className="inline-block px-4 py-2 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm text-[#00D4FF] mb-4">
+          <span className="inline-block px-4 py-2 sm:px-6 sm:py-2.5 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm sm:text-base text-[#00D4FF] mb-4 animate-fade-in">
             Skills
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-[#F0F0F8]">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F0F0F8]">
             Technical Expertise
           </h2>
-          <p className="mt-4 text-lg text-[#9090A8] max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#9090A8] max-w-2xl mx-auto">
             Years of hands-on experience building data-driven solutions
           </p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -86,18 +86,18 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#1A1A24] border border-[#2A2A38] rounded-xl p-6"
+              className="bg-[#1A1A24] border border-[#2A2A38] rounded-xl p-5 sm:p-6 card-hover"
             >
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-5 sm:mb-6">
                 <div className="w-10 h-10 bg-[#00D4FF]/10 rounded-lg flex items-center justify-center">
                   <category.icon className="w-5 h-5 text-[#00D4FF]" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-[#F0F0F8]">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-[#F0F0F8]">
                   {category.title}
                 </h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
                     <div className="flex justify-between mb-2">
@@ -109,7 +109,7 @@ export default function Skills() {
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.05 }}
+                        transition={{ duration: 1.2, delay: index * 0.1 + skillIndex * 0.05 }}
                         className="h-full bg-[#00D4FF] rounded-full"
                       />
                     </div>

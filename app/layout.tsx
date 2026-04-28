@@ -60,9 +60,27 @@ export default function RootLayout({
     },
   };
 
+  const webSiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Abbas Rasool Portfolio',
+    url: 'https://abbasrasool.com',
+    description: 'Crystal Reports Developer and SQL Server Specialist portfolio',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://abbasrasool.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <html lang="en" className={`${display.variable} ${mono.variable} h-full antialiased`}>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

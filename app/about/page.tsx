@@ -1,8 +1,21 @@
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
-  title: 'About – Abbas Rasool',
-  description: 'Learn more about Abbas Rasool, his background, experience, and skills.',
+  title: 'About – Abbas Rasool | Crystal Reports Developer',
+  description: 'Learn more about Abbas Rasool, a Crystal Reports and SQL Server specialist with 2+ years of experience building enterprise reporting solutions for ERP systems.',
+  keywords: ['Crystal Reports developer', 'SQL Server specialist', 'VB6 developer', 'enterprise reporting', 'ERP reports Karachi', 'About me'],
+  openGraph: {
+    title: 'About – Abbas Rasool | Crystal Reports Developer',
+    description: 'Learn more about Abbas Rasool, a Crystal Reports and SQL Server specialist with 2+ years of experience building enterprise reporting solutions for ERP systems.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About – Abbas Rasool | Crystal Reports Developer',
+    description: 'Learn more about Abbas Rasool, a Crystal Reports and SQL Server specialist with 2+ years of experience building enterprise reporting solutions for ERP systems.',
+  },
+  alternates: { canonical: 'https://abbasrasool.com/about' },
 };
 
 export default function AboutPage() {
