@@ -1,0 +1,133 @@
+/* About Page - Professional Profile Theme */
+.about-page {
+  --page-accent: #7B61FF;
+  --page-bg-primary: #0A0A0F;
+  --page-bg-surface: #111118;
+  --page-bg-elevated: #1A1A24;
+  --page-border: #2A2A38;
+  --page-accent-glow: rgba(123, 97, 255, 0.15);
+}
+
+.about-page h1 {
+  color: var(--page-accent);
+  text-shadow: 0 0 30px var(--page-accent-glow);
+}
+
+.about-page .card {
+  background: var(--page-bg-surface);
+  border: 1px solid var(--page-border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.about-page .card:hover {
+  border-color: var(--page-accent);
+  box-shadow: 0 0 20px var(--page-accent-glow);
+}
+
+.about-page .section-title {
+  color: var(--page-accent);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about-page .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--page-accent);
+  border-radius: 2px;
+}
+
+.about-page .timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-page .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--page-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--page-accent-glow);
+}
+
+.about-page .timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  width: 2px;
+  height: calc(100% + 1rem);
+  background: var(--page-border);
+}
+
+.about-page .timeline-item:last-child::after {
+  display: none;
+}
+
+.about-page .skill-bar {
+  height: 8px;
+  background: var(--page-bg-elevated);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.about-page .skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--page-accent), var(--page-accent-glow));
+  border-radius: 4px;
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+}
+
+.about-page .badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--page-bg-elevated);
+  border: 1px solid var(--page-border);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: var(--page-accent);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-page .quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--page-accent);
+  text-align: center;
+  padding: 2rem;
+  background: var(--page-bg-surface);
+  border-left: 4px solid var(--page-accent);
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 768px) {
+  .about-page .section-title {
+    font-size: 2rem;
+  }
+
+  .about-page .quote {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}

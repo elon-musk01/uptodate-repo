@@ -1,0 +1,215 @@
+/* Hire Page - Service Theme */
+.hire-page {
+  --page-accent: #00D4FF;
+  --page-bg-primary: #0A0A0F;
+  --page-bg-surface: #111118;
+  --page-bg-elevated: #1A1A24;
+  --page-border: #2A2A38;
+  --page-accent-glow: rgba(0, 212, 255, 0.15);
+}
+
+.hire-page h1 {
+  color: var(--page-accent);
+  text-shadow: 0 0 30px var(--page-accent-glow);
+}
+
+.hire-page h2 {
+  color: var(--page-accent);
+}
+
+.hire-page .card {
+  background: var(--page-bg-surface);
+  border: 1px solid var(--page-border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.hire-page .card:hover {
+  transform: translateY(-5px);
+  border-color: var(--page-accent);
+  box-shadow: 0 10px 40px var(--page-accent-glow);
+}
+
+.hire-page .service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hire-page .service-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--page-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hire-page .service-list li::before {
+  content: '✓';
+  color: var(--page-accent);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.hire-page .service-list li:last-child {
+  border-bottom: none;
+}
+
+.hire-page .cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--page-accent), #00B8E6);
+  color: var(--page-bg-primary);
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--page-accent-glow);
+}
+
+.hire-page .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--page-accent-glow);
+}
+
+.hire-page .pricing-card {
+  background: var(--page-bg-surface);
+  border: 1px solid var(--page-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hire-page .pricing-card.featured {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 184, 230, 0.05));
+  border-color: var(--page-accent);
+  position: relative;
+}
+
+.hire-page .pricing-card.featured::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--page-accent);
+  color: var(--page-bg-primary);
+  padding: 0.25rem 1rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.hire-page .pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px var(--page-accent-glow);
+}
+
+.hire-page .price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--page-accent);
+  margin: 1rem 0;
+}
+
+.hire-page .price span {
+  font-size: 1rem;
+  color: var(--page-accent);
+  font-weight: 400;
+}
+
+.hire-page .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--page-accent);
+  font-weight: 600;
+  border: 2px solid var(--page-accent);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hire-page .btn-outline:hover {
+  background: var(--page-accent);
+  color: var(--page-bg-primary);
+  box-shadow: 0 4px 15px var(--page-accent-glow);
+}
+
+.hire-page .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--page-accent);
+  text-shadow: 0 0 20px var(--page-accent-glow);
+}
+
+.hire-page .stat-label {
+  color: var(--page-accent);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.hire-page .section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--page-accent), transparent);
+  margin: 3rem 0;
+}
+
+.hire-page .step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--page-accent);
+  color: var(--page-bg-primary);
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hire-page .step-card {
+  background: var(--page-bg-elevated);
+  border: 1px solid var(--page-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hire-page .step-card h3 {
+  color: var(--page-accent);
+  margin-bottom: 0.5rem;
+}
+
+.hire-page .step-card p {
+  color: var(--page-accent);
+}
+
+@media (max-width: 768px) {
+  .hire-page .price {
+    font-size: 2rem;
+  }
+
+  .hire-page .stat-number {
+    font-size: 2rem;
+  }
+
+  .hire-page .pricing-card {
+    padding: 1.5rem;
+  }
+
+  .hire-page .cta-button,
+  .hire-page .btn-outline {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+}
