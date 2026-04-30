@@ -15,10 +15,6 @@ export default function CustomCursor() {
       return;
     }
 
-    const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -73,7 +69,7 @@ export default function CustomCursor() {
           width: isHovering ? 24 : 12,
           height: isHovering ? 24 : 12,
           transform: "translate(-50%, -50%)",
-          backgroundColor: isHovering ? "#00D4FF" : "rgba(255, 255, 255, 0.5)",
+          backgroundColor: isHovering ? "var(--accent)" : "rgba(255, 255, 255, 0.5)",
           transition: "width 0.15s ease, height 0.15s ease, background-color 0.15s ease",
         }}
       />

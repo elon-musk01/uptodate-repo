@@ -8,25 +8,25 @@ const projects = [
     title: "Enterprise ERP Dashboard",
     description: "Comprehensive dashboard for manufacturing ERP system with real-time inventory tracking, production metrics, and financial reports.",
     tags: ["Crystal Reports", "SQL Server", "VB6", "Enterprise"],
-    color: "from-[#00D4FF] to-[#7B61FF]",
+    color: "from-[var(--accent)] to-[var(--accent-secondary)]",
   },
   {
     title: "Sales Analytics Platform",
     description: "Multi-channel sales analytics with regional breakdown, trend analysis, and predictive forecasting for retail clients.",
     tags: ["SQL Server", "Stored Procedures", "Reporting", "Analytics"],
-    color: "from-[#4ECDC4] to-[#00D4FF]",
+    color: "from-[var(--text-primary)] to-[var(--bg-elevated)]",
   },
   {
     title: "HR Payroll System",
     description: "End-to-end payroll processing system with tax calculations, benefits management, and automated compliance reporting.",
     tags: ["SQL Server", "Crystal Reports", "Data Processing", "Compliance"],
-    color: "from-[#FF6B6B] to-[#FFD93D]",
+    color: "from-[var(--accent-secondary)] to-[var(--text-secondary)]",
   },
   {
     title: "Inventory Management",
     description: "Real-time inventory tracking with low-stock alerts, supplier integration, and automated reordering systems.",
     tags: ["SQL Server", "Crystal Reports", "Automation", "Real-time"],
-    color: "from-[#7B61FF] to-[#FF6B9D]",
+    color: "from-[var(--text-secondary)] to-[var(--bg-elevated)]",
   },
 ];
 
@@ -42,13 +42,13 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <span className="inline-block px-4 py-2 sm:px-6 sm:py-2.5 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-sm sm:text-base text-[#00D4FF] mb-4 animate-fade-in">
+          <span className="inline-block px-4 py-2 sm:px-6 sm:py-2.5 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-full text-sm sm:text-base text-[var(--accent)] mb-4 animate-fade-in">
             Projects
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F0F0F8]">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)]">
             Featured Projects
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#9090A8] max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
             Enterprise solutions built for real business problems
           </p>
         </motion.div>
@@ -63,20 +63,20 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-[#111118] border border-[#2A2A38] rounded-xl overflow-hidden hover:border-[#00D4FF]/50 transition-all duration-300 card-hover"
+              className="group bg-[var(--bg-surface)] border border-[var(--border)] rounded-xl overflow-hidden hover:border-[var(--accent)]/50 transition-all duration-300 card-hover"
             >
               {/* Project Header */}
               <div className={`h-2 bg-gradient-to-r ${project.color}`} />
 
               <div className="p-6 sm:p-8">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-[#F0F0F8] group-hover:text-[#00D4FF] transition-colors">
+                  <h3 className="font-display text-xl sm:text-2xl font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
                     {project.title}
                   </h3>
-                  <Database className="w-6 h-6 sm:w-8 sm:h-8 text-[#5A5A72] group-hover:text-[#00D4FF] transition-colors" />
+                  <Database className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--text-tertiary)] group-hover:text-[var(--accent)] transition-colors" />
                 </div>
 
-                <p className="text-[#9090A8] mb-5 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                <p className="text-[var(--text-secondary)] mb-5 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {project.description}
                 </p>
 
@@ -85,7 +85,7 @@ export default function Projects() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-[#1A1A24] border border-[#2A2A38] rounded-full text-xs text-[#9090A8]"
+                      className="px-3 py-1 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-full text-xs text-[var(--text-secondary)]"
                     >
                       {tag}
                     </span>
@@ -95,18 +95,13 @@ export default function Projects() {
                 {/* Links */}
                 <div className="flex gap-3 sm:gap-4">
                   <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-sm text-[#00D4FF] hover:text-[#00D4FF]/80 transition-colors"
+                    href="https://github.com/Reysajju/abbasrasool"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-[var(--accent)]/80 transition-colors"
                   >
                     <ExternalLink size={16} />
-                    <span>View Project</span>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-sm text-[#9090A8] hover:text-[#00D4FF] transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    <span>View Code</span>
+                    <span>View on GitHub</span>
                   </a>
                 </div>
               </div>

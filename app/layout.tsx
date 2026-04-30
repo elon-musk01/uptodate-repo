@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Mono } from "next/font/google";
 import "./globals.css";
-import MainLayout from "@/components/layout/MainLayout";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -16,6 +15,7 @@ const mono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://abbasrasool.com'),
   title: "Abbas Rasool — Crystal Reports Developer | SQL Server Specialist",
   description: "2+ years building enterprise Crystal Reports dashboards and SQL Server stored procedures for ERP systems. Available for freelance reporting projects. Based in Karachi, Pakistan.",
   keywords: ['Crystal Reports developer', 'SQL Server specialist', 'VB6 developer', 'enterprise reporting', 'ERP reports Karachi'],
@@ -76,61 +76,6 @@ export default function RootLayout({
       target: 'https://abbasrasool.com/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What services does Abbas Rasool offer as a Crystal Reports developer?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Abbas Rasool specializes in Crystal Reports development, SQL Server stored procedures, database optimization, VB6 application maintenance, and enterprise reporting solutions. He creates custom reports, dashboards, and data visualization tools for ERP systems.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does it cost to hire a Crystal Reports developer?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Crystal Reports developer rates vary based on project complexity. Abbas Rasool offers competitive freelance rates for Crystal Reports development, SQL Server optimization, and database projects. Contact for a customized quote based on your specific requirements.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the typical turnaround time for Crystal Reports projects?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Most Crystal Reports projects are completed within 3-5 business days for standard reports. Complex enterprise solutions with custom SQL queries and multiple data sources may take 1-2 weeks. Rush projects are available with priority processing.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is Abbas Rasool available for remote work as a legacy developer?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Abbas Rasool works remotely and has extensive experience collaborating with clients across different time zones. He specializes in legacy development including VB6, Crystal Reports, and SQL Server projects for international clients.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does Abbas Rasool provide ongoing maintenance for Crystal Reports?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Abbas Rasool offers ongoing maintenance and support packages for long-term Crystal Reports and SQL Server projects. This includes report updates, database optimization, bug fixes, and performance improvements.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What ERP systems does Abbas Rasool work with?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Abbas Rasool has experience working with various ERP systems including SAP, Oracle ERP, Microsoft Dynamics, and custom enterprise solutions. He creates reports and data integrations tailored to specific business requirements.',
-        },
-      },
-    ],
   };
 
   const organizationSchema = {
@@ -251,13 +196,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
       </head>
-      <body className="min-h-full flex flex-col bg-[#0A0A0F] text-[#F0F0F8]">
-        <MainLayout>{children}</MainLayout>
+      <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
+        {children}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

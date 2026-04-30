@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, Send, ExternalLink, Mail } from "lucide-react";
+import { Menu, X, ExternalLink, Mail } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,9 @@ export default function Navbar() {
     { href: "/faq", label: "FAQs" },
   ];
 
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -37,7 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display text-2xl md:text-3xl font-bold text-[#00D4FF] animate-fade-in"
+            className="font-display text-2xl md:text-3xl font-bold text-[var(--accent)] animate-fade-in"
           >
             AR
           </Link>
@@ -48,11 +53,19 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[#9090A8] hover:text-[#00D4FF] transition-all duration-300 text-sm font-medium relative group"
+                className={`transition-all duration-300 text-sm font-medium relative group ${
+                  isActive(link.href)
+                    ? "text-[var(--accent)]"
+                    : "text-[var(--text-secondary)] hover:text-[var(--accent)]"
+                }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00D4FF] transition-all duration-300 group-hover:w-full" />
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--accent)] transition-all duration-300 ${
+                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             ))}
           </div>
@@ -61,7 +74,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="/hire"
-              className="btn-primary px-6 py-2.5 text-[#0A0A0F] font-medium rounded-lg text-sm"
+              className="btn-primary px-6 py-2.5 text-[var(--bg-primary)] font-medium rounded-lg text-sm"
             >
               Hire Me →
             </a>
@@ -70,7 +83,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-[#1A1A24] border border-[#2A2A38] hover:border-[#00D4FF] transition-all duration-300"
+            className="lg:hidden p-2 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border)] hover:border-[var(--accent)] transition-all duration-300"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -80,24 +93,28 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate-fade-in">
-            <div className="py-4 border-t border-[#2A2A38] backdrop-blur-sm bg-[#111118]/95">
+            <div className="py-4 border-t border-[var(--border)] backdrop-blur-sm bg-[var(--bg-surface)]/95">
               <div className="flex flex-col gap-3">
                 {navLinks.map((link, index) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[#9090A8] hover:text-[#00D4FF] transition-all duration-300 text-sm font-medium py-3 px-4 rounded-lg hover:bg-[#1A1A24] active:scale-95"
+                    className={`transition-all duration-300 text-sm font-medium py-3 px-4 rounded-lg hover:bg-[var(--bg-elevated)] active:scale-95 ${
+                      isActive(link.href)
+                        ? "text-[var(--accent)] bg-[var(--bg-elevated)]"
+                        : "text-[var(--text-secondary)] hover:text-[var(--accent)]"
+                    }`}
                     style={{ animationDelay: `${index * 0.05}s` }}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="flex flex-col gap-3 pt-4 border-t border-[#2A2A38]">
+                <div className="flex flex-col gap-3 pt-4 border-t border-[var(--border)]">
                   <a
                     href="/hire"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="btn-primary px-5 py-3 text-[#0A0A0F] font-medium rounded-lg text-sm text-center active:scale-95"
+                    className="btn-primary px-5 py-3 text-[var(--bg-primary)] font-medium rounded-lg text-sm text-center active:scale-95"
                   >
                     Hire Me →
                   </a>
@@ -105,17 +122,17 @@ export default function Navbar() {
                     <a
                       href="mailto:abbasrasool04@gmail.com"
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-3 bg-[#1A1A24] border border-[#2A2A38] rounded-lg text-[#9090A8] hover:text-[#00D4FF] hover:border-[#00D4FF] transition-all duration-300 active:scale-95"
+                      className="p-3 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300 active:scale-95"
                       aria-label="Email"
                     >
                       <Mail size={20} />
                     </a>
                     <a
-                      href="https://github.com/elon-musk01/uptodate-repo"
+                      href="https://github.com/Reysajju/abbasrasool"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-3 bg-[#1A1A24] border border-[#2A2A38] rounded-lg text-[#9090A8] hover:text-[#00D4FF] hover:border-[#00D4FF] transition-all duration-300 active:scale-95"
+                      className="p-3 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300 active:scale-95"
                       aria-label="GitHub"
                     >
                       <ExternalLink size={20} />
@@ -125,7 +142,7 @@ export default function Navbar() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="p-3 bg-[#1A1A24] border border-[#2A2A38] rounded-lg text-[#9090A8] hover:text-[#00D4FF] hover:border-[#00D4FF] transition-all duration-300 active:scale-95"
+                      className="p-3 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-lg text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300 active:scale-95"
                       aria-label="LinkedIn"
                     >
                       <ExternalLink size={20} />

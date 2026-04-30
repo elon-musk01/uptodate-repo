@@ -55,7 +55,7 @@ export async function POST(request: Request) {
               <style>
                 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
                 .container { background: #f5f5f5; padding: 30px; border-radius: 8px; }
-                h1 { color: #00D4FF; margin-top: 0; }
+                h1 { color: var(--accent); margin-top: 0; }
                 .field { margin-bottom: 15px; }
                 .field-label { font-weight: bold; color: #555; margin-bottom: 5px; }
                 .field-value { background: white; padding: 15px; border-radius: 4px; border: 1px solid #ddd; }
